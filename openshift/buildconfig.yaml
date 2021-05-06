@@ -1,0 +1,30 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: springboot-test
+    app.kubernetes.io/component: springboot-test
+    app.kubernetes.io/instance: springboot-test
+  name: springboot-test
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: springboot-test:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    git:
+      uri: https://github.com/sthaha/springboot-s2i-test.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: registry.redhat.io/redhat-openjdk-18/openjdk18-openshift
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers: {}
