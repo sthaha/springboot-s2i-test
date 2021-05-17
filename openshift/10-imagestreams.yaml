@@ -1,0 +1,22 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    build: binary-build
+  name: binary-build
+  namespace: s2i-test
+spec:
+  lookupPolicy:
+    local: false
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  labels:
+    build: source-build
+  name: source-build
+  namespace: s2i-test
+spec:
+  lookupPolicy:
+    local: false

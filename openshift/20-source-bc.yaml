@@ -2,17 +2,17 @@ apiVersion: build.openshift.io/v1
 kind: BuildConfig
 metadata:
   labels:
-    app: springboot-test
-    app.kubernetes.io/component: springboot-test
-    app.kubernetes.io/instance: springboot-test
-  name: springboot-test
+    app: source-build
+    app.kubernetes.io/component: source-build
+    app.kubernetes.io/instance: source-build
+  name: source-build
 spec:
   failedBuildsHistoryLimit: 5
   nodeSelector: null
   output:
     to:
       kind: ImageStreamTag
-      name: springboot-test:latest
+      name: source-build:latest
   postCommit: {}
   resources: {}
   runPolicy: Serial

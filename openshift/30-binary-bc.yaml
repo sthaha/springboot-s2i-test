@@ -4,15 +4,15 @@ metadata:
   annotations:
     openshift.io/generated-by: OpenShiftNewBuild
   labels:
-    build: foobar
-  name: foobar
+    build: binary-build
+  name: binary-build
   namespace: s2i-test
 spec:
   failedBuildsHistoryLimit: 5
   output:
     to:
       kind: ImageStreamTag
-      name: foobar:latest
+      name: binary-build:latest
   runPolicy: Serial
   source:
     binary: {}
