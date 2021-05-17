@@ -1,4 +1,4 @@
 #!/bin/sh
 
 
-echo "Testing assemble script s2i"
+echo " >>>> Testing assemble script s2i   <<<< from my assemble"
