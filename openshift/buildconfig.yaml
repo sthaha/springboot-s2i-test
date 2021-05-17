@@ -23,8 +23,8 @@ spec:
   strategy:
     sourceStrategy:
       from:
-        kind: DockerImage
-        name: registry.redhat.io/redhat-openjdk-18/openjdk18-openshift
+        kind: ImageStreamTag
+        name: redhat-openjdk18-openshift:1.8
+        namespace: openshift
     type: Source
   successfulBuildsHistoryLimit: 5
-  triggers: {}
